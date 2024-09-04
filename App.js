@@ -1,21 +1,13 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import { colors } from './constants/colors'
+import RootNavigator from './src/navigation/RootNavigator'
+import { StatusBar } from 'expo-status-bar'
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar style='auto' />
-    </View>
+    <>
+      <RootNavigator />
+      <StatusBar style='light' />
+    </>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: colors.white,
-    flex: 1,
-    justifyContent: 'center'
-  }
-})
+export default App
